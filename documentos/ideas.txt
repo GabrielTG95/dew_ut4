@@ -1,0 +1,14 @@
+IDEAS PARA LA PRESENTACI
+  APARTADOS -> PRESENTACIÓN BREVE + EJEMPLOS
+    apartado1 (ANDRÉS - OBJECTO MATH)
+        presentación corta
+        explicacion
+        1+ ejemplos
+      apartado2 (FRAN - OBJETO BOOLEAN)
+        presentación corta
+        explicacion
+        1+ ejemplos
+      apartado3 (ISMAEL Y GABRIEL - OBJETO NUMBER)
+        presentación corta
+        explicacion
+        1+ ejemplos
