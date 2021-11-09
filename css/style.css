@@ -3,3 +3,16 @@
   padding: 0;
   border: border-box;
 }
+header{
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+}
+section div{
+  height: 90vh;
+  background-color: antiquewhite;
+  border: 3px solid black;
+}
+h2{
+  text-align: center;
+}
