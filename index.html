@@ -3,100 +3,161 @@
 
 <head>
   <title>Grupo 1</title>
-  <link  rel="icon"   href="img/favicon.png" type="image/png">
+  <link rel="icon" href="img/favicon.png" type="image/png">
   <!--Información Meta-->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Gabriel Trujillo González, Andrés Romero Segura, Ismael José Morales Arencibia, Jose Francisco Sanabria Castillo">
+  <meta name="author"
+    content="Gabriel Trujillo González, Andrés Romero Segura, Ismael José Morales Arencibia, Jose Francisco Sanabria Castillo">
   <meta name="description" content="Exposición del Grupo 1 sobre objetos math, boolean y number.">
   <meta name="keywords" content="html5, css3, javascript, objetos, math, boolean, number, funciones, metodos">
   <!--Bootsrap 5-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Estilos Externos -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Estilos Externos 
+  <link rel="stylesheet" href="css/style.css">-->
   <!-- JS Externo -->
   <script src="js/principal.js"></script>
   <!--Font Awesome-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Alegreya', serif;
+    }
+
+    body {
+      background: linear-gradient(110deg, rgba(255, 242, 191, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(191, 228, 255, 1) 100%);
+    }
+
+    nav img {
+      height: 10vh;
+    }
+
+    section>div {
+      min-height: 100vh;
+      scroll-margin-top: 14vh;
+    }
+
+    header {
+      backdrop-filter: blur(10px);
+    }
+  </style>
 </head>
 
 <body>
-  <div>
-    <header>
-      <img src="img/favicon.png" alt="Logo" >
-      <nav>
-        <button>Math</button>
-        <button>Boolean</button>
-        <button>Number</button>
+  <div class="container">
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a href="#main" class="navbar-brand"><img src="img/favicon.png" alt="Logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#math">Math</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#boolean">Boolean</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#number1">Number #1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#number1">Number #2</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </nav>
     </header>
-    <section>
-      <div>
+    <section id="main" class="px-4">
+      <div id="math" class="pb-1">
         <h2>
           Math
         </h2>
       </div>
-      <div>
+      <div id="boolean" class="py-1">
         <h2>
           Boolean
         </h2>
       </div>
-      <div>
-        <div>
-          <h2>
-            Number
-          </h2>
-          <button>
-            Presentación
-          </button>
-          <div class="ejercicios">
-            <h4>Propiedades de Number()</h4>
-            <p>El valor máximo que se puede trabajar en JS:</p>
-            <p id="maximo"></p>
-            <script>valorMaximo();</script>
-            <br/>
-
-            <p>El valor mínimo que se puede trabajar en JS:</p>
-            <p id="minimo"></p>
-            <script>valorMinimo();</script>
-            <br/>
-
-            <p>El valor Epsilon o "e" es un número que hace parte del conjunto de los números irracionales su valor en JS es:</p>
-            <p id="Epsilon"></p>
-            <script>valorEpsilon();</script>
-            <br />
-
-            <p>El valor NaN es un valor que nos muestra que no es un número:</p>
-            <p id="Nan"></p>
-            <script>valorNaN();</script>
-            <br />
-
-            <p>El valor Infinito en JS:</p>
-            <p id="infinito"></p>
-            <script>valorinfinito();</script>
-            <br />
-
-            <p>El valor negativo de Infinito en JS:</p>
-            <p id="menos_infinito"></p>
-            <script>valor_menos_infinito();</script>
-            <br/>
-
-            <h4>Metodos de Number()</h4>
-            <p>El metodo parseInt nos convierte texto en números:</p>
-            <input type="text" id="valor">
-            <button onclick="met_ParseInt()">Convertir a número</button>
-            <p id="numero"></p>
-            <br />
+      <div id="number1" class="py-1">
+        <h2>
+          Number
+          <button class="btn btn-secondary ms-2" data-bs-toggle="modal" data-bs-target="#math1"><i
+              class="fas fa-window-maximize"></i></button>
+        </h2>
+        <div class="modal fade" id="math1" tabindex="-1" aria-labelledby="math1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-body">
+                  <iframe
+                    src="https://docs.google.com/presentation/d/e/2PACX-1vSEisQhNBeDENlFZYqJVyQPVxmSWB_OFu6PUhw5CggbWPjm3_F5zK5OWCk_hpHiZsl1K0-U3S2f9Rx6/embed?start=true&loop=false&delayms=3000"
+                    frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true"
+                    webkitallowfullscreen="true"></iframe>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div>
-          <h2>
-            Number, Cambios de base
-          </h2>
+        <div class="ejercicios">
+          <h4>Propiedades de Number()</h4>
+          <p>El valor máximo que se puede trabajar en JS:</p>
+          <p id="maximo"></p>
+          <script>valorMaximo();</script>
+          <br />
+
+          <p>El valor mínimo que se puede trabajar en JS:</p>
+          <p id="minimo"></p>
+          <script>valorMinimo();</script>
+          <br />
+
+          <p>El valor Epsilon o "e" es un número que hace parte del conjunto de los números irracionales su valor en JS
+            es:</p>
+          <p id="Epsilon"></p>
+          <script>valorEpsilon();</script>
+          <br />
+
+          <p>El valor NaN es un valor que nos muestra que no es un número:</p>
+          <p id="Nan"></p>
+          <script>valorNaN();</script>
+          <br />
+
+          <p>El valor Infinito en JS:</p>
+          <p id="infinito"></p>
+          <script>valorinfinito();</script>
+          <br />
+
+          <p>El valor negativo de Infinito en JS:</p>
+          <p id="menos_infinito"></p>
+          <script>valor_menos_infinito();</script>
+          <br />
+
+          <h4>Metodos de Number()</h4>
+          <p>El metodo parseInt nos convierte texto en números:</p>
+          <input type="text" id="valor">
+          <button onclick="met_ParseInt()">Convertir a número</button>
+          <p id="numero"></p>
+          <br />
         </div>
+      </div>
+      <div id="number2" class="py-1">
+        <h2>
+          Number, Cambios de base
+        </h2>
       </div>
     </section>
     <footer></footer>
