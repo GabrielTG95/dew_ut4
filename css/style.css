@@ -11,6 +11,10 @@ body {
   background: linear-gradient(110deg, rgba(255, 242, 191, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(191, 228, 255, 1) 100%);
 }
 
+header {
+  backdrop-filter: blur(10px);
+}
+
 nav img {
   height: 10vh;
 }
@@ -19,7 +23,11 @@ section>div {
   min-height: 100vh;
   scroll-margin-top: 14vh;
 }
+section > hr{
+  border: 1.5px solid grey;
+}
 
-header {
-  backdrop-filter: blur(10px);
+.ejercicios hr{
+  width: 50%;
+  margin: 0 auto 1em;
 }
