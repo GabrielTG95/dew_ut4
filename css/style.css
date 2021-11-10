@@ -9,7 +9,7 @@ header{
   justify-content: space-between;
 }
 section div{
-  height: 90vh;
+  height: 100vh;
   background-color: antiquewhite;
   border: 3px solid black;
 }
