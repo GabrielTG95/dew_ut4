@@ -1,11 +1,14 @@
-function redondeo_decimales(numero, decimales) {
+function redondeo_decimales() {
+  let numero = document.getElementById('numero').value;
+  let decimales = document.getElementById('redondeo').value;
   var resultado1 = numero * Math.pow(10, decimales);
   var resultado2 = Math.round(resultado1);
   var resultado3 = resultado2 / Math.pow(10, decimales);
   document.getElementById("funcionRedondeo").value = resultado3;
 }
 
-function areaCirculo(radio) {
+function areaCirculo() {
+  let radio = document.getElementById('radio').value;
   var pi = Math.PI;
   radio = radio * radio;
   document.getElementById("funcionArea").value = (pi * radio);
