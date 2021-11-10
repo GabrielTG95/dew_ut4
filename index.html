@@ -86,6 +86,69 @@
             </div>
           </div>
         </div>
+        <div class="ejercicios">
+          <label for="euler">Math.E</label>
+          <input id="euler" type="text" disabled>
+          <br><br>
+          <label for="pi">Math.PI</label>
+          <input id="pi" type="text" disabled>
+          <br><br>
+          <label for="valorAbsoluto">Math.abs(-45)</label>
+          <input id="valorAbsoluto" type="text" disabled>
+          <br><br>
+          <label for="max">Math.max(5,60,40,100)</label>
+          <input id="max" type="text" disabled>
+          <br><br>
+          <label for="min">Math.min(5,60,40,100)</label>
+          <input id="min" type="text" disabled>
+          <br><br>
+          <label for="pow">Math.pow(2, 5)</label>
+          <input id="pow" type="text" disabled>
+          <br><br>
+          <label for="signNegativo">Math.sign(-50)</label>
+          <input id="signNegativo" type="text" disabled>
+          <br><br>
+          <label for="signPositivo">Math.pow(50)</label>
+          <input id="signPositivo" type="text" disabled>
+          <br><br>
+          <label for="random">Math.random()</label>
+          <input id="random" type="text" disabled> </label>
+          <br><br>
+          <label for="round">Math.round(4.3)</label>
+          <input id="round" type="text" disabled></label>
+          <br><br>
+          <label for="floor">Math.floor(4.3, 2)</label>
+          <input id="floor" type="text" disabled></label>
+          <br><br>
+          <label for="ceil">Math.ceil(4.8)</label>
+          <input id="ceil" type="text" disabled></label>
+          <br><br>
+          <label for="trunc">Math.trunc(4.82)</label>
+          <input id="trunc" type="text" disabled></label>
+          <br><br>
+          <hr>
+          <p style="font-family: 'Courier New', Courier, monospace; color: red; font-weight: bold;">function redondeo_decimales(numero, decimales) {<br> &nbsp;&nbsp;&nbsp;var resultado1 = numero * Math.pow(10, decimales);<br> &nbsp;&nbsp;&nbsp;var resultado2 = Math.round(resultado1);<br> &nbsp;&nbsp;&nbsp;var resultado3 = resultado2;<br>&nbsp;&nbsp;&nbsp;document.getElementById("funcionRedondeo").value
+              = resultado3;<br> }</p>
+
+          <label for="numero">NÚMERO</label>
+          <input id="numero" type="text"></label>
+          <br><br>
+          <label for="redondeo">REDONDEO</label>
+          <input id="redondeo" type="text"></label>
+          <br><br>
+          <button class="btn btn-outline-secondary" onclick="redondeo_decimales(numero.value ,redondeo.value)">FUNCIÓN REDONDEO DECIMALES</button>
+          <br><br>
+          <input id="funcionRedondeo" type="text" disabled></label>
+          <hr>
+          <p style="font-family: 'Courier New', Courier, monospace; color: red; font-weight: bold;">function areaCirculo(radio) {<br> &nbsp;&nbsp;&nbsp;var pi = Math.PI;<br> &nbsp;&nbsp;&nbsp;radio = radio * radio; <br> &nbsp;&nbsp;&nbsp;document.getElementById("funcionArea").value = (pi * radio);<br> }</p>
+          <label for="radio">RADIO</label>
+          <input id="radio" type="text"></label>
+          <br><br>
+          <button class="btn btn-outline-secondary" onclick="areaCirculo(radio.value)">FUNCIÓN REDONDEO DECIMALES</button>
+          <br><br>
+          <input id="funcionArea" type="text" disabled></label>
+          <hr>
+        </div>
       </div>
       <hr>
       <div id="boolean" class="py-1">
@@ -212,7 +275,7 @@
         <div class="ejercicios">
           <div>
             <h3>Origen Binario</h3>
-            <h4>A decimal:</h4>
+            <h4>A decimal:<span class="tooltip bs-tooltip-top" role="tooltip" title="Ejemplo"><sup>?</sup></span></h4>
             <div>
               <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un binario" type="text" id="bide" onkeyup="bide(this.value)">
               <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="bideResult" disabled>

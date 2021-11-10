@@ -1,43 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Alegreya', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alegreya', serif;
 }
 
 body {
-  background: linear-gradient(110deg, rgba(255, 242, 191, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(191, 228, 255, 1) 100%);
+    background: linear-gradient(110deg, rgba(255, 242, 191, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(191, 228, 255, 1) 100%);
 }
 
 header {
-  backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 nav img {
-  height: 4em;
+    height: 4em;
 }
-
-/*.navbar-brand span:last-child{
-  margin-left: 3em;
-}*/
 
 section>div {
-  min-height: 100vh;
-  scroll-margin-top: 14vh;
-}
-section > hr{
-  border: 1.5px solid grey;
+    min-height: 100vh;
+    scroll-margin-top: 16vh;
 }
 
-.ejercicios hr{
-  width: 50%;
-  margin: 0 auto 1em;
+section>hr {
+    border: 1.5px solid grey;
+}
+
+.ejercicios hr {
+    width: 50%;
+    margin: 0 auto 1em;
 }
 
 .list-group-item {
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
 }
