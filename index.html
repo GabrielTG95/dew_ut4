@@ -122,9 +122,6 @@
                     <input class="form-control d-inline w-auto" id="trunc" type="text" disabled></label>
                     <br><br>
                     <hr>
-                    <p class="text-start w-75 ps-5 mx-auto">function redondeo_decimales(numero, decimales) {<br> &nbsp;&nbsp;&nbsp;var resultado1 = numero * Math.pow(10, decimales);<br> &nbsp;&nbsp;&nbsp;var resultado2 = Math.round(resultado1);<br> &nbsp;&nbsp;&nbsp;var resultado3 = resultado2;<br>&nbsp;&nbsp;&nbsp;document.getElementById("funcionRedondeo").value
-                        = resultado3;<br> }
-                    </p>
                     <label class="form-label" for="numero">NÚMERO</label>
                     <input class="form-control d-inline w-auto" id="numero" type="text"></label>
                     <br><br>
@@ -133,16 +130,49 @@
                     <br><br>
                     <button class="btn btn-outline-secondary" onclick="redondeo_decimales()">FUNCIÓN REDONDEO DECIMALES</button>
                     <br><br>
-                    <input class="form-control d-inline w-auto" id="funcionRedondeo" type="text" disabled></label>
+                    <input class="form-control d-inline w-auto" id="funcionRedondeo" type="text" disabled></label> <sup data-bs-toggle="modal" data-bs-target="#mathej1">?</sup>
+                    <div class="modal fade" id="mathej1" tabindex="-1" aria-labelledby="mathej1" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <pre class="text-start">
+                                        function redondeo_decimales() {
+                                            let numero = document.getElementById('numero').value;
+                                            let decimales = document.getElementById('redondeo').value;
+                                            var resultado1 = numero * Math.pow(10, decimales);
+                                            var resultado2 = Math.round(resultado1);
+                                            var resultado3 = resultado2 / Math.pow(10, decimales);
+                                            document.getElementById("funcionRedondeo").value = resultado3;
+                                        }
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <br><br>
                     <hr>
-                    <p class="text-start w-75 ps-5 mx-auto">function areaCirculo(radio) {<br> &nbsp;&nbsp;&nbsp;var pi = Math.PI;<br> &nbsp;&nbsp;&nbsp;radio = radio * radio; <br> &nbsp;&nbsp;&nbsp;document.getElementById("funcionArea").value = (pi * radio);<br> }</p>
                     <label class="form-label" for="radio">RADIO</label>
                     <input class="form-control d-inline w-auto" id="radio" type="text"></label>
                     <br><br>
                     <button class="btn btn-outline-secondary" onclick="areaCirculo()">FUNCIÓN REDONDEO DECIMALES</button>
                     <br><br>
-                    <input class="form-control d-inline w-auto" id="funcionArea" type="text" disabled></label>
+                    <input class="form-control d-inline w-auto" id="funcionArea" type="text" disabled></label> <sup data-bs-toggle="modal" data-bs-target="#mathej2">?</sup>
+                    <div class="modal fade" id="mathej2" tabindex="-1" aria-labelledby="mathej2" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <pre class="text-start">
+                                        function areaCirculo() {
+                                            let radio = document.getElementById('radio').value;
+                                            var pi = Math.PI;
+                                            radio = radio * radio;
+                                            document.getElementById("funcionArea").value = (pi * radio);
+                                        }
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <script src="js/math.js"></script>
             </div>
@@ -159,7 +189,8 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <div class="modal-body">
-                                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRjjnAmBgj3BaSnZiHILbhJCcHmH6ZpL0riikGWOwd_KDKXzBrDhNKEpFnpUFUiKvZdqvQdiateRgZZ/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRjjnAmBgj3BaSnZiHILbhJCcHmH6ZpL0riikGWOwd_KDKXzBrDhNKEpFnpUFUiKvZdqvQdiateRgZZ/embed?start=false&loop=false&delayms=3000" 
+                                        frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                                 </div>
                             </div>
                         </div>
