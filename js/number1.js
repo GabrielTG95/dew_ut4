@@ -41,7 +41,33 @@ function met_ParseFloat() {
 
 function met_toExponential() {
   let valor = document.getElementById("valor3").value;
-  let expo = document.getElementById("exponencial").value;
+  let exponencial = document.getElementById("exponencial").value;
   let numero = parseFloat(valor);
-  document.getElementById("numero_exponencial").innerHTML = numero.toExponential(expo);
+  document.getElementById("numero_exponencial").innerHTML = numero.toExponential(exponencial);
+}
+
+function met_toFixed() {
+  let valor = document.getElementById("valor4").value;
+  let redondeo = document.getElementById("redondeo").value;
+  let numero = parseFloat(valor);
+  document.getElementById("numero_redondeado").innerHTML = numero.toFixed(redondeo);
+}
+
+function met_isInteger() {
+  let valor = document.getElementById("valor5").value;
+  let numero = parseFloat(valor);
+  document.getElementById("numero_comprobacion").innerHTML = Number.isInteger(numero);
+}
+
+function met_isFinite() {
+  let valor = document.getElementById("valor6").value;
+  let numero = parseFloat(valor);
+  document.getElementById("numero_comprobacion2").innerHTML = Number.isFinite(numero);
+  document.getElementById("numero_comprobacion22").innerHTML = numero;
+}
+
+function met_isNaN() {
+  let valor = document.getElementById("valor7").value;
+  let numero = parseFloat(valor);
+  document.getElementById("numero_comprobacion3").innerHTML = Number.isNaN(numero);
 }
