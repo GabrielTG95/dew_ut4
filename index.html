@@ -31,7 +31,16 @@
     <header class="sticky-top">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a href="#main" class="navbar-brand"><img src="img/favicon.png" alt="Logo"></a>
+          <a href="#main" class="navbar-brand">
+            <div class="d-flex">
+              <img src="img/favicon.png" alt="Logo" class="me-2">
+              <div class="d-inline-block">
+                <span class="h1">Objetos Básicos</span>
+                <br><span class="h4">Math - Boolean - Number</span>
+              </div>
+            </div>
+            
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -235,22 +244,95 @@
         <div class="ejercicios">
           <div>
             <h3>Origen Binario</h3>
+            <h4>A decimal:</h4>
+            <div>
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un binario" type="text" id="bide" onkeyup="bide(this.value)">
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="bideResult" disabled>
+            </div>
+            <br>
+            <h4>A octal:</h4>
+            <div>
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un binario" type="text" id="bioc" onkeyup="bioc(this.value)">
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="biocResult" disabled>
+            </div>
+            <br>
+            <h4>A hexadecimal:</h4>
+            <div>
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un binario" type="text" id="bihe" onkeyup="bihe(this.value)">
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="biheResult" disabled>
+            </div>
+            <br>
           </div>
           <hr>
           <div>
             <h3>Origen Decimal</h3>
+            <h4>A binario:</h4>
+            <div>
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un decimal" type="text" id="debi" onkeyup="debi(this.value)">
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="debiResult" disabled>
+            </div>
+            <br>
+            <h4>A octal:</h4>
+            <div>
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un decimal" type="text" id="deoc" onkeyup="deoc(this.value)">
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="deocResult" disabled>
+            </div>
+            <br>
+            <h4>A hexadecimal:</h4>
+            <div>
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un decimal" type="text" id="dehe" onkeyup="dehe(this.value)">
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="deheResult" disabled>
+            </div>
+            <br>
           </div>
           <hr>
           <div>
             <h3>Origen Octal</h3>
+            <h4>A binario:</h4>
+            <div>
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un octal" type="text" id="ocbi" onkeyup="ocbi(this.value)">
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="ocbiResult" disabled>
+            </div>
+            <br>
+            <h4>A decimal:</h4>
+            <div>
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un octal" type="text" id="ocde" onkeyup="ocde(this.value)">
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="ocdeResult" disabled>
+            </div>
+            <br>
+            <h4>A hexadecimal:</h4>
+            <div>
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un octal" type="text" id="oche" onkeyup="oche(this.value)">
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="ocheResult" disabled>
+            </div>
+            <br>
           </div>
           <hr>
           <div>
             <h3>Origen Hexadecimal</h3>
+            <h4>A binario:</h4>
+            <div>
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un hexadecimal" type="text" id="hebi" onkeyup="hebi(this.value)">
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="hebiResult" disabled>
+            </div>
+            <br>
+            <h4>A decimal:</h4>
+            <div>
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un hexadecimal" type="text" id="hede" onkeyup="hede(this.value)">
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="hedeResult" disabled>
+            </div>
+            <br>
+            <h4>A octal:</h4>
+            <div>
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un hexadecimal" type="text" id="heoc" onkeyup="heoc(this.value)">
+              <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="heocResult" disabled>
+            </div>
+            <br>
           </div>
         </div>
       </div>
     </section>
+    <hr>
     <footer>
       <p class="h4">Trabajo realizado por:</p>
       <ul class="list-group list-group-flush">

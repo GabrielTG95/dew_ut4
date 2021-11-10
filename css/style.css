@@ -16,8 +16,12 @@ header {
 }
 
 nav img {
-  height: 10vh;
+  height: 4em;
 }
+
+/*.navbar-brand span:last-child{
+  margin-left: 3em;
+}*/
 
 section>div {
   min-height: 100vh;
@@ -31,8 +35,9 @@ section > hr{
   width: 50%;
   margin: 0 auto 1em;
 }
+
 .list-group-item {
   background-color: transparent;
   border: none;
   border-radius: 0;
-  }
+}
