@@ -125,33 +125,55 @@
           <script>valorMinimo();</script>
           <br />
 
-          <p>El valor Epsilon o "e" es un número que hace parte del conjunto de los números irracionales su valor en JS
-            es:</p>
-          <p id="Epsilon"></p>
-          <script>valorEpsilon();</script>
-          <br />
+            <p>El valor Epsilon o "e" es un número que hace parte del conjunto de los números irracionales su valor en JS es:</p>
+            <p id="Epsilon"></p>
+            <script>valorEpsilon();</script>
+            <br/>
 
-          <p>El valor NaN es un valor que nos muestra que no es un número:</p>
-          <p id="Nan"></p>
-          <script>valorNaN();</script>
-          <br />
+            <p>El valor NaN es un valor que nos muestra que no es un número:</p>
+            <p id="Nan"></p>
+            <script>valorNaN();</script>
+            <br/>
 
-          <p>El valor Infinito en JS:</p>
-          <p id="infinito"></p>
-          <script>valorinfinito();</script>
-          <br />
+            <p>El valor Infinito en JS:</p>
+            <p id="infinito"></p>
+            <script>valorinfinito();</script>
+            <br/>
 
-          <p>El valor negativo de Infinito en JS:</p>
-          <p id="menos_infinito"></p>
-          <script>valor_menos_infinito();</script>
-          <br />
+            <p>El valor negativo de Infinito en JS:</p>
+            <p id="menos_infinito"></p>
+            <script>valor_menos_infinito();</script>
+            <br />
 
-          <h4>Metodos de Number()</h4>
-          <p>El metodo parseInt nos convierte texto en números:</p>
-          <input type="text" id="valor">
-          <button onclick="met_ParseInt()">Convertir a número</button>
-          <p id="numero"></p>
-          <br />
+            <h4>Metodos de Number()</h4>
+            <p>El metodo parseInt nos convierte texto en números enteros:</p>
+            <p>Valor:</p>
+            <input type="text" id="valor">
+            <button onclick="met_ParseInt()">Convertir a número entero</button>
+            <p id="numero_entero"></p>
+            <br/>
+
+            <p>El metodo parseFloat nos convierte texto en números con decimales:</p>
+            <p>Valor:</p>
+            <input type="text" id="valor2">
+            <button onclick="met_ParseFloat()">Convertir a número con decimales</button>
+            <p id="numero_decimal"></p>
+            <br/>
+
+            <p>El metodo toExponential() hace exponencial a un número:</p>
+            <p>Valor:</p>
+            <input type="text" id="valor3">
+            <p>Valor exponencial:</p>
+            <input type="text" id="exponencial"><br/>
+            <button onclick="met_toExponential()">hacer exponencial el valor</button>
+            <p id="numero_exponencial"></p>
+            <br />
+          </div>
+        </div>
+        <div>
+          <h2>
+            Number, Cambios de base
+          </h2>
         </div>
       </div>
       <div id="number2" class="py-1">

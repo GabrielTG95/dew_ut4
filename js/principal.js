@@ -46,7 +46,20 @@ function valor_menos_infinito() {
 function met_ParseInt() {
     let valor = document.getElementById("valor").value;
     let numero = parseInt(valor);
-    document.getElementById("numero").innerHTML = numero;
+    document.getElementById("numero_entero").innerHTML = numero;
+}
+
+function met_ParseFloat() {
+    let valor = document.getElementById("valor2").value;
+    let numero = parseFloat(valor);
+    document.getElementById("numero_decimal").innerHTML = numero;
+}
+
+function met_toExponential() {
+    let valor = document.getElementById("valor3").value;
+    let expo = document.getElementById("exponencial").value;
+    let numero = parseFloat(valor);
+    document.getElementById("numero_exponencial").innerHTML = numero.toExponential(expo);
 }
 
 /*-----------------------------------------------
