@@ -58,11 +58,11 @@
     </header>
     <section id="main" class="px-4">
       <div id="math" class="pb-1">
-        <h2>
+        <h1>
           Math
           <button class="btn btn-secondary ms-2" data-bs-toggle="modal" data-bs-target="#mathppt"><i
               class="fas fa-window-maximize"></i></button>
-        </h2>
+        </h1>
         <div class="modal fade" id="mathppt" tabindex="-1" aria-labelledby="math1" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
@@ -80,11 +80,11 @@
       </div>
       <hr>
       <div id="boolean" class="py-1">
-        <h2>
+        <h1>
           Boolean
           <button class="btn btn-secondary ms-2" data-bs-toggle="modal" data-bs-target="#booleanppt"><i
               class="fas fa-window-maximize"></i></button>
-        </h2>
+        </h1>
         <div class="modal fade" id="booleanppt" tabindex="-1" aria-labelledby="math1" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
@@ -102,11 +102,11 @@
       </div>
       <hr>
       <div id="number1" class="py-1">
-        <h2>
+        <h1>
           Number
           <button class="btn btn-secondary ms-2" data-bs-toggle="modal" data-bs-target="#numberppt1"><i
               class="fas fa-window-maximize"></i></button>
-        </h2>
+        </h1>
         <div class="modal fade" id="numberppt1" tabindex="-1" aria-labelledby="math1" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
@@ -122,69 +122,72 @@
           </div>
         </div>
         <div class="ejercicios">
-          <h4>Propiedades de Number()</h4>
-          <p>El valor máximo que se puede trabajar en JS:</p>
-          <p id="maximo"></p>
-          <script>valorMaximo();</script>
-          <br />
-          <hr>
-          <p>El valor mínimo que se puede trabajar en JS:</p>
-          <p id="minimo"></p>
-          <script>valorMinimo();</script>
-          <br />
-          <hr>
-          <p>El valor Epsilon o "e" es un número que hace parte del conjunto de los números irracionales su valor en JS es:</p>
-          <p id="Epsilon"></p>
-          <script>valorEpsilon();</script>
-          <br/>
-          <hr>
-          <p>El valor NaN es un valor que nos muestra que no es un número:</p>
-          <p id="Nan"></p>
-          <script>valorNaN();</script>
-          <br/>
-          <hr>
-          <p>El valor Infinito en JS:</p>
-          <p id="infinito"></p>
-          <script>valorinfinito();</script>
-          <br/>
-          <hr>
-          <p>El valor negativo de Infinito en JS:</p>
-          <p id="menos_infinito"></p>
-          <script>valor_menos_infinito();</script>
-          <br />
-          <hr>
-          <h4>Metodos de Number()</h4>
-          <p>El metodo parseInt nos convierte texto en números enteros:</p>
-          <p>Valor:</p>
-          <input class="form-control d-inline w-auto" type="text" id="valor">
-          <button class="btn btn-secondary" onclick="met_ParseInt()">Convertir a número entero</button>
-          <p id="numero_entero"></p>
-          <br/>
-          <hr>
-          <p>El metodo parseFloat nos convierte texto en números con decimales:</p>
-          <p>Valor:</p>
-          <input class="form-control d-inline w-auto" type="text" id="valor2">
-          <button class="btn btn-secondary" onclick="met_ParseFloat()">Convertir a número con decimales</button>
-          <p id="numero_decimal"></p>
-          <br/>
-          <hr>
-          <p>El metodo toExponential() hace exponencial a un número:</p>
-          <p>Valor:</p>
-          <input class="form-control d-inline w-auto" type="text" id="valor3">
-          <p>Valor exponencial:</p>
-          <input class="form-control d-inline w-auto" type="text" id="exponencial"><br/>
-          <button class="btn btn-secondary mt-3" onclick="met_toExponential()">Hacer exponencial el valor</button>
-          <p id="numero_exponencial"></p>
-          <br />
+          <div>
+            <h3>Propiedades de Number()</h3>
+            <p>El valor máximo que se puede trabajar en JS:</p>
+            <p id="maximo"></p>
+            <script>valorMaximo();</script>
+            <br />
+            <hr>
+            <p>El valor mínimo que se puede trabajar en JS:</p>
+            <p id="minimo"></p>
+            <script>valorMinimo();</script>
+            <br />
+            <hr>
+            <p>El valor Epsilon o "e" es un número que hace parte del conjunto de los números irracionales su valor en JS es:</p>
+            <p id="Epsilon"></p>
+            <script>valorEpsilon();</script>
+            <br/>
+            <hr>
+            <p>El valor NaN es un valor que nos muestra que no es un número:</p>
+            <p id="Nan"></p>
+            <script>valorNaN();</script>
+            <br/>
+            <hr>
+            <p>El valor Infinito en JS:</p>
+            <p id="infinito"></p>
+            <script>valorinfinito();</script>
+            <br/>
+            <hr>
+            <p>El valor negativo de Infinito en JS:</p>
+            <p id="menos_infinito"></p>
+            <script>valor_menos_infinito();</script>
+            <br />
+            <hr>
+          </div>          
+          <div>
+            <h3>Metodos de Number()</h3>
+            <p>El metodo parseInt nos convierte texto en números enteros:</p>
+            <p>Valor:</p>
+            <input class="form-control d-inline w-auto" type="text" id="valor">
+            <button class="btn btn-secondary" onclick="met_ParseInt()">Convertir a número entero</button>
+            <p id="numero_entero"></p>
+            <br/>
+            <hr>
+            <p>El metodo parseFloat nos convierte texto en números con decimales:</p>
+            <p>Valor:</p>
+            <input class="form-control d-inline w-auto" type="text" id="valor2">
+            <button class="btn btn-secondary" onclick="met_ParseFloat()">Convertir a número con decimales</button>
+            <p id="numero_decimal"></p>
+            <br/>
+            <hr>
+            <p>El metodo toExponential() hace exponencial a un número:</p>
+            <p>Valor:</p>
+            <input class="form-control d-inline w-auto" type="text" id="valor3">
+            <p>Valor exponencial:</p>
+            <input class="form-control d-inline w-auto" type="text" id="exponencial"><br/>
+            <button class="btn btn-secondary mt-3" onclick="met_toExponential()">Hacer exponencial el valor</button>
+            <p id="numero_exponencial"></p>
+          </div>
         </div>
       </div>
       <hr>
       <div id="number2">
-        <h2>
+        <h1>
           Number - Cambios de Base
           <button class="btn btn-secondary ms-2" data-bs-toggle="modal" data-bs-target="#numberppt2"><i
               class="fas fa-window-maximize"></i></button>
-        </h2>
+          </h1>
         <div class="modal fade" id="numberppt2" tabindex="-1" aria-labelledby="math1" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
@@ -198,11 +201,33 @@
           </div>
         </div>
         <div class="ejercicios">
-          
+          <div>
+            <h3>Origen Binario</h3>
+          </div>
+          <hr>
+          <div>
+            <h3>Origen Decimal</h3>
+          </div>
+          <hr>
+          <div>
+            <h3>Origen Octal</h3>
+          </div>
+          <hr>
+          <div>
+            <h3>Origen Hexadecimal</h3>
+          </div>
         </div>
       </div>
     </section>
-    <footer></footer>
+    <footer>
+      <p class="h4">Trabajo realizado por:</p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Gabriel Trujillo González</li>
+        <li class="list-group-item">Andrés Romero Segura</li>
+        <li class="list-group-item">Ismael Morales Arencibia</li>
+        <li class="list-group-item">Fran Sanabria Castillo</li>
+      </ul>
+    </footer>
   </div>
 </body>
 

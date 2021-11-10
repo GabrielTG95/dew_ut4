@@ -31,3 +31,8 @@ section > hr{
   width: 50%;
   margin: 0 auto 1em;
 }
+.list-group-item {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  }
