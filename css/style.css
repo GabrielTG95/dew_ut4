@@ -36,6 +36,10 @@ section>hr {
     font-family: 'Courier New', Courier, monospace; color: red; font-weight: bold;
 }
 
+sup{
+    cursor: pointer;
+}
+
 .list-group-item {
     background-color: transparent;
     border: none;

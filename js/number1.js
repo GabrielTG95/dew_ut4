@@ -22,6 +22,7 @@ function valorinfinito() {
   let infinito = Number.POSITIVE_INFINITY;
   document.getElementById("infinito").innerHTML = infinito;
 }
+
 function valor_menos_infinito() {
   let menos_infinito = Number.NEGATIVE_INFINITY;
   document.getElementById("menos_infinito").innerHTML = menos_infinito;

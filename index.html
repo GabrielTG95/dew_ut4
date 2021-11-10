@@ -129,7 +129,7 @@
                     <label class="form-label" for="redondeo">REDONDEO</label>
                     <input class="form-control d-inline w-auto" id="redondeo" type="text"></label>
                     <br><br>
-                    <button class="btn btn-outline-secondary" onclick="redondeo_decimales(numero.value ,redondeo.value)">FUNCIÓN REDONDEO DECIMALES</button>
+                    <button class="btn btn-outline-secondary" onclick="redondeo_decimales()">FUNCIÓN REDONDEO DECIMALES</button>
                     <br><br>
                     <input class="form-control d-inline w-auto" id="funcionRedondeo" type="text" disabled></label>
                     <br><br>
@@ -138,7 +138,7 @@
                     <label class="form-label" for="radio">RADIO</label>
                     <input class="form-control d-inline w-auto" id="radio" type="text"></label>
                     <br><br>
-                    <button class="btn btn-outline-secondary" onclick="areaCirculo(radio.value)">FUNCIÓN REDONDEO DECIMALES</button>
+                    <button class="btn btn-outline-secondary" onclick="areaCirculo()">FUNCIÓN REDONDEO DECIMALES</button>
                     <br><br>
                     <input class="form-control d-inline w-auto" id="funcionArea" type="text" disabled></label>
                 </div>
@@ -187,43 +187,151 @@
                 <br/>
                 <div class="ejercicios">
                     <div>
-                        <h3>Propiedades de Number()</h3>
-                        <p>El valor máximo que se puede trabajar en JS:</p>
+                        <h2>Propiedades de Number()</h2>
+                        <h4>El valor máximo que se puede trabajar en JS:<sup data-bs-toggle="modal" data-bs-target="#num1">?</sup></h4>
+                        <div class="modal fade" id="num1" tabindex="-1" aria-labelledby="num1" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El valor máximo que se puede trabajar en JS:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function valorMaximo(){
+                                                let maximo = Number.MAX_VALUE;
+                                                document.getElementById("maximo").innerHTML = maximo;
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p id="maximo"></p>
                         <script>
                             valorMaximo();
                         </script>
                         <br />
                         <hr>
-                        <p>El valor mínimo que se puede trabajar en JS:</p>
+                        <h4>El valor mínimo que se puede trabajar en JS:<sup data-bs-toggle="modal" data-bs-target="#num2">?</sup></h4>
+                        <div class="modal fade" id="num2" tabindex="-1" aria-labelledby="num2" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El valor mínimo que se puede trabajar en JS:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function valorMinimo() {
+                                                let minimo = Number.MIN_VALUE;
+                                                document.getElementById("minimo").innerHTML = minimo;
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p id="minimo"></p>
                         <script>
                             valorMinimo();
                         </script>
                         <br />
                         <hr>
-                        <p>El valor Epsilon o "e" es un número que hace parte del conjunto de los números irracionales su valor en JS es:</p>
+                        <h4>El valor Epsilon o "e" es un número que hace parte del conjunto de los números irracionales su valor en JS es:<sup data-bs-toggle="modal" data-bs-target="#num3">?</sup></h4>
+                        <div class="modal fade" id="num3" tabindex="-1" aria-labelledby="num3" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El valor Epsilon o "e" es un número que hace parte del conjunto de los números irracionales su valor en JS es:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function valorEpsilon() {
+                                                let Epsilon = Number.EPSILON;
+                                                document.getElementById("Epsilon").innerHTML = Epsilon;
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p id="Epsilon"></p>
                         <script>
                             valorEpsilon();
                         </script>
                         <br/>
                         <hr>
-                        <p>El valor NaN es un valor que nos muestra que no es un número:</p>
+                        <h4>El valor NaN es un valor que nos muestra que no es un número:<sup data-bs-toggle="modal" data-bs-target="#num4">?</sup></h4>
+                        <div class="modal fade" id="num4" tabindex="-1" aria-labelledby="num4" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El valor NaN es un valor que nos muestra que no es un número:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function valorNaN() {
+                                                let Nan = Number.NaN;
+                                                document.getElementById("Nan").innerHTML = Nan;
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p id="Nan"></p>
                         <script>
                             valorNaN();
                         </script>
                         <br/>
                         <hr>
-                        <p>El valor Infinito en JS:</p>
+                        <h4>El valor Infinito en JS:<sup data-bs-toggle="modal" data-bs-target="#num5">?</sup></h4>
+                        <div class="modal fade" id="num5" tabindex="-1" aria-labelledby="num5" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El valor Infinito en JS:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function valorinfinito() {
+                                                let infinito = Number.POSITIVE_INFINITY;
+                                                document.getElementById("infinito").innerHTML = infinito;
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p id="infinito"></p>
                         <script>
                             valorinfinito();
                         </script>
                         <br/>
                         <hr>
-                        <p>El valor negativo de Infinito en JS:</p>
+                        <h4>El valor negativo de Infinito en JS:<sup data-bs-toggle="modal" data-bs-target="#num6">?</sup></h4>
+                        <div class="modal fade" id="num6" tabindex="-1" aria-labelledby="num6" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El valor negativo de Infinito en JS:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function valor_menos_infinito() {
+                                                let menos_infinito = Number.NEGATIVE_INFINITY;
+                                                document.getElementById("menos_infinito").innerHTML = menos_infinito;
+                                            }s
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p id="menos_infinito"></p>
                         <script>
                             valor_menos_infinito();
@@ -232,22 +340,80 @@
                         <hr>
                     </div>
                     <div>
-                        <h3>Metodos de Number()</h3>
-                        <p>El metodo parseInt nos convierte texto en números enteros:</p>
+                        <h2>Metodos de Number()</h2>
+                        <h4>El metodo parseInt nos convierte texto en números enteros:<sup data-bs-toggle="modal" data-bs-target="#num7">?</sup></h4>
+                        <div class="modal fade" id="num7" tabindex="-1" aria-labelledby="num7" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El metodo parseInt nos convierte texto en números enteros:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function met_ParseInt() {
+                                                let valor = document.getElementById("valor").value;
+                                                let numero = parseInt(valor);
+                                                document.getElementById("numero_entero").innerHTML = numero;
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p>Valor:</p>
                         <input class="form-control d-inline w-auto" type="text" id="valor">
                         <button class="btn btn-secondary" onclick="met_ParseInt()">Convertir a número entero</button>
                         <p id="numero_entero"></p>
                         <br/>
                         <hr>
-                        <p>El metodo parseFloat nos convierte texto en números con decimales:</p>
+                        <h4>El metodo parseFloat nos convierte texto en números con decimales:<sup data-bs-toggle="modal" data-bs-target="#num8">?</sup></h4>
+                        <div class="modal fade" id="num8" tabindex="-1" aria-labelledby="num8" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El metodo parseFloat nos convierte texto en números con decimales:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function met_ParseFloat() {
+                                                let valor = document.getElementById("valor2").value;
+                                                let numero = parseFloat(valor);
+                                                document.getElementById("numero_decimal").innerHTML = numero;
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p>Valor:</p>
                         <input class="form-control d-inline w-auto" type="text" id="valor2">
                         <button class="btn btn-secondary" onclick="met_ParseFloat()">Convertir a número con decimales</button>
                         <p id="numero_decimal"></p>
                         <br/>
                         <hr>
-                        <p>El metodo toExponential() hace exponencial a un número:</p>
+                        <h4>El metodo toExponential() hace exponencial a un número:<sup data-bs-toggle="modal" data-bs-target="#num9">?</sup></h4>
+                        <div class="modal fade" id="num9" tabindex="-1" aria-labelledby="num9" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El metodo toExponential() hace exponencial a un número:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function met_toExponential() {
+                                                let valor = document.getElementById("valor3").value;
+                                                let exponencial = document.getElementById("exponencial").value;
+                                                let numero = parseFloat(valor);
+                                                document.getElementById("numero_exponencial").innerHTML = numero.toExponential(exponencial);
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p>Valor:</p>
                         <input class="form-control d-inline w-auto" type="text" id="valor3">
                         <p>Valor exponencial:</p>
@@ -256,7 +422,27 @@
                         <p id="numero_exponencial"></p>
                         <br />
                         <hr>
-                        <p>El metodo toFixed() nos ayuda con el redondeo y lso decimales:</p>
+                        <h4>El metodo toFixed() nos ayuda con el redondeo y lso decimales:<sup data-bs-toggle="modal" data-bs-target="#num10">?</sup></h4>
+                        <div class="modal fade" id="num10" tabindex="-1" aria-labelledby="num10" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El metodo toFixed() nos ayuda con el redondeo y lso decimales:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function met_toFixed() {
+                                                let valor = document.getElementById("valor4").value;
+                                                let redondeo = document.getElementById("redondeo").value;
+                                                let numero = parseFloat(valor);
+                                                document.getElementById("numero_redondeado").innerHTML = numero.toFixed(redondeo);
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p>Valor:</p>
                         <input class="form-control d-inline w-auto" type="text" id="valor4">
                         <p>Valor de redondeo:</p>
@@ -265,14 +451,53 @@
                         <p id="numero_redondeado"></p>
                         <br />
                         <hr>
-                        <p>El metodo isInteger nos devuelve si el valor es un número:</p>
+                        <h4>El metodo isInteger nos devuelve si el valor es un número:<sup data-bs-toggle="modal" data-bs-target="#num11">?</sup></h4>
+                        <div class="modal fade" id="num11" tabindex="-1" aria-labelledby="num11" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El metodo isInteger nos devuelve si el valor es un número:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function met_isInteger() {
+                                                let valor = document.getElementById("valor5").value;
+                                                let numero = parseFloat(valor);
+                                                document.getElementById("numero_comprobacion").innerHTML = Number.isInteger(numero);
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p>Valor:</p>
                         <input class="form-control d-inline w-auto" type="text" id="valor5">
                         <button class="btn btn-secondary" onclick="met_isInteger()">Comprobar si el valor es un número</button>
                         <p id="numero_comprobacion"></p>
                         <br />
                         <hr>
-                        <p>El metodo isFinite nos devuelve si el valor es un Finito:</p>
+                        <h4>El metodo isFinite nos devuelve si el valor es un Finito:<sup data-bs-toggle="modal" data-bs-target="#num12">?</sup></h4>
+                        <div class="modal fade" id="num12" tabindex="-1" aria-labelledby="num12" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El metodo isFinite nos devuelve si el valor es un Finito:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function met_isFinite() {
+                                                let valor = document.getElementById("valor6").value;
+                                                let numero = parseFloat(valor);
+                                                document.getElementById("numero_comprobacion2").innerHTML = Number.isFinite(numero);
+                                                document.getElementById("numero_comprobacion22").innerHTML = numero;
+                                              }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p>Valor:</p>
                         <input class="form-control d-inline w-auto" type="text" id="valor6">
                         <button class="btn btn-secondary" onclick="met_isFinite()">Comprobar si el valor es un número</button>
@@ -280,7 +505,26 @@
                         <p id="numero_comprobacion22"></p>
                         <br />
                         <hr>
-                        <p>El metodo isNaN nos devuelve si el valor no es un número:</p>
+                        <h4>El metodo isNaN nos devuelve si el valor no es un número:<sup data-bs-toggle="modal" data-bs-target="#num13">?</sup></h4>
+                        <div class="modal fade" id="num13" tabindex="-1" aria-labelledby="num13" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">El metodo isNaN nos devuelve si el valor no es un número:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function met_isNaN() {
+                                                let valor = document.getElementById("valor7").value;
+                                                let numero = parseFloat(valor);
+                                                document.getElementById("numero_comprobacion3").innerHTML = Number.isNaN(numero);
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p>Valor:</p>
                         <input class="form-control d-inline w-auto" type="text" id="valor7">
                         <button class="btn btn-secondary" onclick="met_isNaN()">Comprobar si el valor no es un número</button>
@@ -309,20 +553,102 @@
                 </div>
                 <div class="ejercicios">
                     <div>
-                        <h3>Origen Binario</h3>
-                        <h4>A decimal:<span class="tooltip bs-tooltip-top" role="tooltip" title="Ejemplo"><sup>?</sup></span></h4>
+                        <h2>Origen Binario</h2>
+                        <h4>A decimal: <sup data-bs-toggle="modal" data-bs-target="#numbi1">?</sup></h4>
+                        <div class="modal fade" id="numbi1" tabindex="-1" aria-labelledby="numbi1" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">A decimal:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function esBinario(valor){
+                                                let pattern = /^[0-1]*$/;
+                                                return pattern.test(valor);
+                                            }
+                                            function bide(valor){
+                                                let result = document.getElementById('bideResult');
+                                                if(valor == ""){
+                                                    result.value = '';
+                                                }else{
+                                                    if(esBinario(valor)){
+                                                    result.value = parseInt(valor,2);
+                                                    }else{
+                                                    result.value = 'Debes insertar un número binario';
+                                                    }    
+                                                }
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un binario" type="text" id="bide" onkeyup="bide(this.value)">
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="bideResult" disabled>
                         </div>
                         <br>
-                        <h4>A octal:</h4>
+                        <h4>A octal:<sup data-bs-toggle="modal" data-bs-target="#numbi2">?</sup></h4>
+                        <div class="modal fade" id="numbi2" tabindex="-1" aria-labelledby="numbi2" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">A octal:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function bioc(valor){
+                                                let result = document.getElementById('biocResult');
+                                                if(valor == ""){
+                                                  result.value = '';
+                                                }else{
+                                                  if(esBinario(valor)){
+                                                    result.value = parseInt(valor,2).toString(8);
+                                                  }else{
+                                                    result.value = 'Debes insertar un número binario';
+                                                  }    
+                                                }
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un binario" type="text" id="bioc" onkeyup="bioc(this.value)">
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="biocResult" disabled>
                         </div>
                         <br>
-                        <h4>A hexadecimal:</h4>
+                        <h4>A hexadecimal:<sup data-bs-toggle="modal" data-bs-target="#numbi3">?</sup></h4>
+                        <div class="modal fade" id="numbi3" tabindex="-1" aria-labelledby="numbi3" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">A hexadecimal:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function bihe(valor){
+                                                let result = document.getElementById('biheResult');
+                                                if(valor == ""){
+                                                  result.value = '';
+                                                }else{
+                                                  if(esBinario(valor)){
+                                                    result.value = parseInt(valor,2).toString(16);
+                                                  }else{
+                                                    result.value = 'Debes insertar un número binario';
+                                                  }    
+                                                }
+                                              }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un binario" type="text" id="bihe" onkeyup="bihe(this.value)">
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="biheResult" disabled>
@@ -331,20 +657,105 @@
                     </div>
                     <hr>
                     <div>
-                        <h3>Origen Decimal</h3>
-                        <h4>A binario:</h4>
+                        <h2>Origen Decimal</h2>
+                        <h4>A binario:<sup data-bs-toggle="modal" data-bs-target="#numde1">?</sup></h4>
+                        <div class="modal fade" id="numde1" tabindex="-1" aria-labelledby="numde1" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">A binario:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function esDecimal(valor){  
+                                                let pattern = /^[0-9]*$/;
+                                                return pattern.test(valor);
+                                            }
+                                            function debi(valor){
+                                                let result = document.getElementById('debiResult');
+                                                if(valor == ""){
+                                                  result.value = '';
+                                                }else{
+                                                  if(esDecimal(valor)){
+                                                    valor = parseInt(valor);
+                                                    result.value = valor.toString(2);
+                                                  }else{
+                                                    result.value = 'Debes insertar un número decimal';
+                                                  }    
+                                                }
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un decimal" type="text" id="debi" onkeyup="debi(this.value)">
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="debiResult" disabled>
                         </div>
                         <br>
-                        <h4>A octal:</h4>
+                        <h4>A octal:<sup data-bs-toggle="modal" data-bs-target="#numde2">?</sup></h4>
+                        <div class="modal fade" id="numde2" tabindex="-1" aria-labelledby="numde2" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">A octal:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function deoc(valor){
+                                                let result = document.getElementById('deocResult');
+                                                if(valor == ""){
+                                                  result.value = '';
+                                                }else{
+                                                  if(esDecimal(valor)){
+                                                    valor = parseInt(valor);
+                                                    result.value = valor.toString(8);
+                                                  }else{
+                                                    result.value = 'Debes insertar un número decimal';
+                                                  }    
+                                                }
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un decimal" type="text" id="deoc" onkeyup="deoc(this.value)">
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="deocResult" disabled>
                         </div>
                         <br>
-                        <h4>A hexadecimal:</h4>
+                        <h4>A hexadecimal:<sup data-bs-toggle="modal" data-bs-target="#numde3">?</sup></h4>
+                        <div class="modal fade" id="numde3" tabindex="-1" aria-labelledby="numde3" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">A hexadecimal:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function dehe(valor){
+                                                let result = document.getElementById('deheResult');
+                                                if(valor == ""){
+                                                  result.value = '';
+                                                }else{
+                                                  if(esDecimal(valor)){
+                                                    valor = parseInt(valor);
+                                                    result.value = valor.toString(16);
+                                                  }else{
+                                                    result.value = 'Debes insertar un número decimal';
+                                                  }    
+                                                }
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un decimal" type="text" id="dehe" onkeyup="dehe(this.value)">
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="deheResult" disabled>
@@ -353,20 +764,102 @@
                     </div>
                     <hr>
                     <div>
-                        <h3>Origen Octal</h3>
-                        <h4>A binario:</h4>
+                        <h2>Origen Octal</h2>
+                        <h4>A binario:<sup data-bs-toggle="modal" data-bs-target="#numoc1">?</sup></h4>
+                        <div class="modal fade" id="numoc1" tabindex="-1" aria-labelledby="numoc1" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">A binario:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function esOctal(valor){  
+                                                let pattern = /^[0-7]*$/;
+                                                return pattern.test(valor);
+                                            }
+                                            function ocbi(valor){
+                                                let result = document.getElementById('ocbiResult');
+                                                if(valor == ""){
+                                                  result.value = '';
+                                                }else{
+                                                  if(esOctal(valor)){
+                                                    result.value = parseInt(valor,8).toString(2);
+                                                  }else{
+                                                    result.value = 'Debes insertar un número octal';
+                                                  }    
+                                                }
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un octal" type="text" id="ocbi" onkeyup="ocbi(this.value)">
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="ocbiResult" disabled>
                         </div>
                         <br>
-                        <h4>A decimal:</h4>
+                        <h4>A decimal:<sup data-bs-toggle="modal" data-bs-target="#numoc2">?</sup></h4>
+                        <div class="modal fade" id="numoc2" tabindex="-1" aria-labelledby="numoc2" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">A decimal:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function ocde(valor){
+                                                let result = document.getElementById('ocdeResult');
+                                                if(valor == ""){
+                                                  result.value = '';
+                                                }else{
+                                                  if(esOctal(valor)){
+                                                    result.value = parseInt(valor,8);
+                                                  }else{
+                                                    result.value = 'Debes insertar un número octal';
+                                                  }    
+                                                }
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un octal" type="text" id="ocde" onkeyup="ocde(this.value)">
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="ocdeResult" disabled>
                         </div>
                         <br>
-                        <h4>A hexadecimal:</h4>
+                        <h4>A hexadecimal:<sup data-bs-toggle="modal" data-bs-target="#numoc3">?</sup></h4>
+                        <div class="modal fade" id="numoc3" tabindex="-1" aria-labelledby="numoc3" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">A hexadecimal:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function oche(valor){
+                                                let result = document.getElementById('ocheResult');
+                                                if(valor == ""){
+                                                  result.value = '';
+                                                }else{
+                                                  if(esOctal(valor)){
+                                                    result.value = parseInt(valor,8).toString(16);
+                                                  }else{
+                                                    result.value = 'Debes insertar un número octal';
+                                                  }    
+                                                }
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un octal" type="text" id="oche" onkeyup="oche(this.value)">
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="ocheResult" disabled>
@@ -375,20 +868,102 @@
                     </div>
                     <hr>
                     <div>
-                        <h3>Origen Hexadecimal</h3>
-                        <h4>A binario:</h4>
+                        <h2>Origen Hexadecimal</h2>
+                        <h4>A binario:<sup data-bs-toggle="modal" data-bs-target="#numhe1">?</sup></h4>
+                        <div class="modal fade" id="numhe1" tabindex="-1" aria-labelledby="numhe1" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">A binario:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function esHexadecimal(valor){  
+                                                let pattern = /[A-F]*[0-9]*/;
+                                                return pattern.test(valor);
+                                            }
+                                            function hebi(valor){
+                                                let result = document.getElementById('hebiResult');
+                                                if(valor == ""){
+                                                  result.value = '';
+                                                }else{
+                                                  if(esHexadecimal(valor)){
+                                                    result.value = parseInt(valor,16).toString(2);
+                                                  }else{
+                                                    result.value = 'Debes insertar un número octal';
+                                                  }    
+                                                }
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un hexadecimal" type="text" id="hebi" onkeyup="hebi(this.value)">
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="hebiResult" disabled>
                         </div>
                         <br>
-                        <h4>A decimal:</h4>
+                        <h4>A decimal:<sup data-bs-toggle="modal" data-bs-target="#numhe2s">?</sup></h4>
+                        <div class="modal fade" id="numhe2s" tabindex="-1" aria-labelledby="numhe2s" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">A decimal:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function hede(valor){
+                                                let result = document.getElementById('hedeResult');
+                                                if(valor == ""){
+                                                  result.value = '';
+                                                }else{
+                                                  if(esHexadecimal(valor)){
+                                                    result.value = parseInt(valor,16);
+                                                  }else{
+                                                    result.value = 'Debes insertar un número octal';
+                                                  }    
+                                                }
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un hexadecimal" type="text" id="hede" onkeyup="hede(this.value)">
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="hedeResult" disabled>
                         </div>
                         <br>
-                        <h4>A octal:</h4>
+                        <h4>A octal:<sup data-bs-toggle="modal" data-bs-target="#numhe3">?</sup></h4>
+                        <div class="modal fade" id="numhe3" tabindex="-1" aria-labelledby="numhe3" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">A octal:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <pre class="text-start">
+                                            function heoc(valor){
+                                                let result = document.getElementById('heocResult');
+                                                if(valor == ""){
+                                                  result.value = '';
+                                                }else{
+                                                  if(esHexadecimal(valor)){
+                                                    result.value = parseInt(valor,16).toString(8);
+                                                  }else{
+                                                    result.value = 'Debes insertar un número octal';
+                                                  }    
+                                                }
+                                            }
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Inserta un hexadecimal" type="text" id="heoc" onkeyup="heoc(this.value)">
                             <input class="form-control mx-auto my-1 w-50 text-center" placeholder="Resultado" type="text" id="heocResult" disabled>
