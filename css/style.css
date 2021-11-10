@@ -1,33 +1,25 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+
+* {
   margin: 0;
   padding: 0;
-  border: border-box;
-}
-header{
-  height: 15vh;
-  display: flex;
-  justify-content: space-between;
-}
-section div{
-  height: 100vh;
-  background-color: antiquewhite;
-  border: 3px solid black;
-}
-h2{
-  text-align: center;
+  box-sizing: border-box;
+  font-family: 'Alegreya', serif;
 }
 
+body {
+  background: linear-gradient(110deg, rgba(255, 242, 191, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(191, 228, 255, 1) 100%);
+}
 
-.ejercicios{
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  height: auto;
+nav img {
+  height: 10vh;
 }
-h4{
-  text-align: center;
+
+section>div {
+  min-height: 100vh;
+  scroll-margin-top: 14vh;
 }
-.ejercicios p{
-  margin-bottom: 0px;
+
+header {
+  backdrop-filter: blur(10px);
 }
