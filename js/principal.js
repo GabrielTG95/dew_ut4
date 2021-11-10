@@ -49,6 +49,12 @@ function valor_menos_infinito() {
     document.getElementById("menos_infinito").innerHTML = menos_infinito;
 }
 
+function met_ParseInt() {
+    let valor = document.getElementById("valor").value;
+    let numero = parseInt(valor);
+    document.getElementById("numero").innerHTML = numero;
+}
+
 /*-----------------------------------------------
             Number, Cambios de base
 -------------------------------------------------*/
