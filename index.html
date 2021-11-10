@@ -159,12 +159,78 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <div class="modal-body">
-                                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSEisQhNBeDENlFZYqJVyQPVxmSWB_OFu6PUhw5CggbWPjm3_F5zK5OWCk_hpHiZsl1K0-U3S2f9Rx6/embed?start=true&loop=false&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true"
-                                        webkitallowfullscreen="true"></iframe>
+                                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRjjnAmBgj3BaSnZiHILbhJCcHmH6ZpL0riikGWOwd_KDKXzBrDhNKEpFnpUFUiKvZdqvQdiateRgZZ/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="ejercicios">
+                    <h2>Propiedades de Boolean</h2>
+                    <h4>prototype:</h4>
+                    <p>Permite añadir nuevos atributos al objeto Boolean.</p>
+                    <h4>toString:</h4>
+                    <p>Devuelve una string que representa al objeto Boolean. Si el valor del objeto boolean es 
+                        <span class="text-decoration-underline">true</span>, ese método devuelve la string <span class="text-decoration-underline">"true"</span> 
+                        y si es <span class="text-decoration-underline">false</span> devolvería la string <span class="text-decoration-underline">"false"</span>
+                    </p>
+                    <hr>
+                    <h4>Ejemplos de las Propiedades comentadas:</h4>
+                    <p id="ejemplo"></p>
+                    <script>
+                        ejemplo()
+                    </script>
+                    <br/>
+                    <hr>
+                    <h4>Ejemplo de aplicación de un Objeto Booleano:</h4>
+                    <h6>Cálculo de una combinación de lotería primitiva.<sup data-bs-toggle="modal" data-bs-target="#num1">?</sup></h6>
+                    <div class="modal fade" id="num1" tabindex="-1" aria-labelledby="num1" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Cálculo de una combinación de lotería primitiva.</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <pre class="text-start">
+                                        var primitiva = new Array(6);
+
+                                        function GenerarNumeros() {
+                                            var i, j, k;
+                                            var intnumero;
+                                            var blnrepetido = new Boolean();
+                                            document.getElementById("txtNumeros").value = "";
+                                            for (i = 0; i < 6; i++) {
+                                                do {
+                                                    blnrepetido = false;
+                                                    intnumero = Math.floor(Math.random() * 49) + 1;
+                                                    j = 0;
+                                                    while ((j < i) && (!blnrepetido)) {
+                                                        if (primitiva[j] == intnumero)
+                                                            blnrepetido = true;
+                                                        j++;
+                                                    }
+                                                } while (blnrepetido);
+                                                primitiva[i] = intnumero;
+                                            }
+                                            primitiva.sort(Comparar);
+                                            for (i = 0; i < 6; i++) {
+                                                document.getElementById("txtNumeros").value += primitiva[i] + " ";
+                                            }
+
+                                            function Comparar(a, b) {
+                                                return a - b;
+                                            }
+                                        }
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" onclick="GenerarNumeros()">Generar Números</button>
+                    <br/>
+                    <br/> 
+                    <input class="form-control d-inline w-auto" type="text" id="txtNumeros" disabled>
                 </div>
             </div>
             <hr>
