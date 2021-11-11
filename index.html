@@ -143,9 +143,9 @@
                                         function redondeo_decimales() {
                                             let numero = document.getElementById('numero').value;
                                             let decimales = document.getElementById('redondeo').value;
-                                            var resultado1 = numero * Math.pow(10, decimales);
-                                            var resultado2 = Math.round(resultado1);
-                                            var resultado3 = resultado2 / Math.pow(10, decimales);
+                                            var resultado1 = numero * <span class="ejemplo">Math.pow(10, decimales)</span>;
+                                            var resultado2 = <span class="ejemplo">Math.round(resultado1)</span>;
+                                            var resultado3 = resultado2 / <span class="ejemplo">Math.pow(10, decimales)</span>;
                                             document.getElementById("funcionRedondeo").value = resultado3;
                                         }
                                     </pre>
@@ -172,7 +172,7 @@
                                     <pre class="text-start">
                                         function areaCirculo() {
                                             let radio = document.getElementById('radio').value;
-                                            var pi = Math.PI;
+                                            var pi = <span class="ejemplo">Math.PI</span>;
                                             radio = radio * radio;
                                             document.getElementById("funcionArea").value = (pi * radio);
                                         }
@@ -235,7 +235,7 @@
                                         function GenerarNumeros() {
                                             var i, j, k;
                                             var intnumero;
-                                            var blnrepetido = new Boolean();
+                                            var blnrepetido = <span class="ejemplo">new Boolean()</span>;
                                             document.getElementById("txtNumeros").value = "";
                                             for (i = 0; i < 6; i++) {
                                                 do {
@@ -304,7 +304,7 @@
                                     <div class="modal-body">
                                         <pre class="text-start">
                                             function valorMaximo(){
-                                                let maximo = Number.MAX_VALUE;
+                                                let maximo = <span class="ejemplo">Number.MAX_VALUE</span>;
                                                 document.getElementById("maximo").innerHTML = maximo;
                                             }
                                         </pre>
@@ -329,7 +329,7 @@
                                     <div class="modal-body">
                                         <pre class="text-start">
                                             function valorMinimo() {
-                                                let minimo = Number.MIN_VALUE;
+                                                let minimo = <span class="ejemplo">Number.MIN_VALUE</span>;
                                                 document.getElementById("minimo").innerHTML = minimo;
                                             }
                                         </pre>
@@ -354,7 +354,7 @@
                                     <div class="modal-body">
                                         <pre class="text-start">
                                             function valorEpsilon() {
-                                                let Epsilon = Number.EPSILON;
+                                                let Epsilon = <span class="ejemplo">Number.EPSILON</span>;
                                                 document.getElementById("Epsilon").innerHTML = Epsilon;
                                             }
                                         </pre>
@@ -379,7 +379,7 @@
                                     <div class="modal-body">
                                         <pre class="text-start">
                                             function valorNaN() {
-                                                let Nan = Number.NaN;
+                                                let Nan = <span class="ejemplo">Number.NaN</span>;
                                                 document.getElementById("Nan").innerHTML = Nan;
                                             }
                                         </pre>
@@ -404,7 +404,7 @@
                                     <div class="modal-body">
                                         <pre class="text-start">
                                             function valorinfinito() {
-                                                let infinito = Number.POSITIVE_INFINITY;
+                                                let infinito = <span class="ejemplo">Number.POSITIVE_INFINITY</span>;
                                                 document.getElementById("infinito").innerHTML = infinito;
                                             }
                                         </pre>
@@ -429,7 +429,7 @@
                                     <div class="modal-body">
                                         <pre class="text-start">
                                             function valor_menos_infinito() {
-                                                let menos_infinito = Number.NEGATIVE_INFINITY;
+                                                let menos_infinito = <span class="ejemplo">Number.NEGATIVE_INFINITY</span>;
                                                 document.getElementById("menos_infinito").innerHTML = menos_infinito;
                                             }s
                                         </pre>
@@ -458,7 +458,7 @@
                                         <pre class="text-start">
                                             function met_ParseInt() {
                                                 let valor = document.getElementById("valor").value;
-                                                let numero = parseInt(valor);
+                                                let numero = <span class="ejemplo">parseInt(valor)</span>;
                                                 document.getElementById("numero_entero").innerHTML = numero;
                                             }
                                         </pre>
@@ -484,7 +484,7 @@
                                         <pre class="text-start">
                                             function met_ParseFloat() {
                                                 let valor = document.getElementById("valor2").value;
-                                                let numero = parseFloat(valor);
+                                                let numero = <span class="ejemplo">parseFloat(valor)</span>;
                                                 document.getElementById("numero_decimal").innerHTML = numero;
                                             }
                                         </pre>
@@ -511,8 +511,8 @@
                                             function met_toExponential() {
                                                 let valor = document.getElementById("valor3").value;
                                                 let exponencial = document.getElementById("exponencial").value;
-                                                let numero = parseFloat(valor);
-                                                document.getElementById("numero_exponencial").innerHTML = numero.toExponential(exponencial);
+                                                let numero = <span class="ejemplo">parseFloat(valor)</span>;
+                                                document.getElementById("numero_exponencial").innerHTML = <span class="ejemplo">numero.toExponential(exponencial)</span>;
                                             }
                                         </pre>
                                     </div>
@@ -540,8 +540,8 @@
                                             function met_toFixed() {
                                                 let valor = document.getElementById("valor4").value;
                                                 let redondeo = document.getElementById("redondeo").value;
-                                                let numero = parseFloat(valor);
-                                                document.getElementById("numero_redondeado").innerHTML = numero.toFixed(redondeo);
+                                                let numero = <span class="ejemplo">parseFloat(valor)</span>;
+                                                document.getElementById("numero_redondeado").innerHTML = <span class="ejemplo">numero.toFixed(redondeo)</span>;
                                             }
                                         </pre>
                                     </div>
@@ -568,8 +568,8 @@
                                         <pre class="text-start">
                                             function met_isInteger() {
                                                 let valor = document.getElementById("valor5").value;
-                                                let numero = parseFloat(valor);
-                                                document.getElementById("numero_comprobacion").innerHTML = Number.isInteger(numero);
+                                                let numero = <span class="ejemplo">parseFloat(valor)</span>;
+                                                document.getElementById("numero_comprobacion").innerHTML = <span class="ejemplo">Number.isInteger(numero)</span>;
                                             }
                                         </pre>
                                     </div>
@@ -594,8 +594,8 @@
                                         <pre class="text-start">
                                             function met_isFinite() {
                                                 let valor = document.getElementById("valor6").value;
-                                                let numero = parseFloat(valor);
-                                                document.getElementById("numero_comprobacion2").innerHTML = Number.isFinite(numero);
+                                                let numero = <span class="ejemplo">parseFloat(valor)</span>;
+                                                document.getElementById("numero_comprobacion2").innerHTML = <span class="ejemplo">Number.isFinite(numero)</span>;
                                                 document.getElementById("numero_comprobacion22").innerHTML = numero;
                                               }
                                         </pre>
@@ -622,8 +622,8 @@
                                         <pre class="text-start">
                                             function met_isNaN() {
                                                 let valor = document.getElementById("valor7").value;
-                                                let numero = parseFloat(valor);
-                                                document.getElementById("numero_comprobacion3").innerHTML = Number.isNaN(numero);
+                                                let numero = <span class="ejemplo">parseFloat(valor)</span>;
+                                                document.getElementById("numero_comprobacion3").innerHTML = <span class="ejemplo">Number.isNaN(numero)</span>;
                                             }
                                         </pre>
                                     </div>
@@ -670,7 +670,7 @@
                                     <div class="modal-body">
                                         <pre class="text-start">
                                             function esBinario(valor){
-                                                let pattern = /^[0-1]*$/;
+                                                let pattern = <span class="ejemplo">/^[0-1]*$/</span>;
                                                 return pattern.test(valor);
                                             }
                                             function bide(valor){
@@ -679,7 +679,7 @@
                                                     result.value = '';
                                                 }else{
                                                     if(esBinario(valor)){
-                                                    result.value = parseInt(valor,2);
+                                                    result.value = <span class="ejemplo">parseInt(valor,2)</span>;
                                                     }else{
                                                     result.value = 'Debes insertar un número binario';
                                                     }    
@@ -711,7 +711,7 @@
                                                   result.value = '';
                                                 }else{
                                                   if(esBinario(valor)){
-                                                    result.value = parseInt(valor,2).toString(8);
+                                                    result.value = <span class="ejemplo">parseInt(valor,2).toString(8)</span>;
                                                   }else{
                                                     result.value = 'Debes insertar un número binario';
                                                   }    
@@ -743,7 +743,7 @@
                                                   result.value = '';
                                                 }else{
                                                   if(esBinario(valor)){
-                                                    result.value = parseInt(valor,2).toString(16);
+                                                    result.value = <span class="ejemplo">parseInt(valor,2).toString(16)</span>;
                                                   }else{
                                                     result.value = 'Debes insertar un número binario';
                                                   }    
@@ -774,7 +774,7 @@
                                     <div class="modal-body">
                                         <pre class="text-start">
                                             function esDecimal(valor){  
-                                                let pattern = /^[0-9]*$/;
+                                                let pattern = <span class="ejemplo">/^[0-9]*$/</span>;
                                                 return pattern.test(valor);
                                             }
                                             function debi(valor){
@@ -784,7 +784,7 @@
                                                 }else{
                                                   if(esDecimal(valor)){
                                                     valor = parseInt(valor);
-                                                    result.value = valor.toString(2);
+                                                    result.value = <span class="ejemplo">valor.toString(2)</span>;
                                                   }else{
                                                     result.value = 'Debes insertar un número decimal';
                                                   }    
@@ -817,7 +817,7 @@
                                                 }else{
                                                   if(esDecimal(valor)){
                                                     valor = parseInt(valor);
-                                                    result.value = valor.toString(8);
+                                                    result.value = <span class="ejemplo">valor.toString(8)</span>;
                                                   }else{
                                                     result.value = 'Debes insertar un número decimal';
                                                   }    
@@ -850,7 +850,7 @@
                                                 }else{
                                                   if(esDecimal(valor)){
                                                     valor = parseInt(valor);
-                                                    result.value = valor.toString(16);
+                                                    result.value = <span class="ejemplo">valor.toString(16)</span>;
                                                   }else{
                                                     result.value = 'Debes insertar un número decimal';
                                                   }    
@@ -881,7 +881,7 @@
                                     <div class="modal-body">
                                         <pre class="text-start">
                                             function esOctal(valor){  
-                                                let pattern = /^[0-7]*$/;
+                                                let pattern = <span class="ejemplo">/^[0-7]*$/</span>;
                                                 return pattern.test(valor);
                                             }
                                             function ocbi(valor){
@@ -890,7 +890,7 @@
                                                   result.value = '';
                                                 }else{
                                                   if(esOctal(valor)){
-                                                    result.value = parseInt(valor,8).toString(2);
+                                                    result.value = <span class="ejemplo">parseInt(valor,8).toString(2)</span>;
                                                   }else{
                                                     result.value = 'Debes insertar un número octal';
                                                   }    
@@ -922,7 +922,7 @@
                                                   result.value = '';
                                                 }else{
                                                   if(esOctal(valor)){
-                                                    result.value = parseInt(valor,8);
+                                                    result.value = <span class="ejemplo">parseInt(valor,8)</span>;
                                                   }else{
                                                     result.value = 'Debes insertar un número octal';
                                                   }    
@@ -954,7 +954,7 @@
                                                   result.value = '';
                                                 }else{
                                                   if(esOctal(valor)){
-                                                    result.value = parseInt(valor,8).toString(16);
+                                                    result.value = <span class="ejemplo">parseInt(valor,8).toString(16)</span>;
                                                   }else{
                                                     result.value = 'Debes insertar un número octal';
                                                   }    
@@ -985,7 +985,7 @@
                                     <div class="modal-body">
                                         <pre class="text-start">
                                             function esHexadecimal(valor){  
-                                                let pattern = /[A-F]*[0-9]*/;
+                                                let pattern = <span class="ejemplo">/[A-F]*[0-9]*/</span>;
                                                 return pattern.test(valor);
                                             }
                                             function hebi(valor){
@@ -994,7 +994,7 @@
                                                   result.value = '';
                                                 }else{
                                                   if(esHexadecimal(valor)){
-                                                    result.value = parseInt(valor,16).toString(2);
+                                                    result.value = <span class="ejemplo">parseInt(valor,16).toString(2)</span>;
                                                   }else{
                                                     result.value = 'Debes insertar un número octal';
                                                   }    
@@ -1026,7 +1026,7 @@
                                                   result.value = '';
                                                 }else{
                                                   if(esHexadecimal(valor)){
-                                                    result.value = parseInt(valor,16);
+                                                    result.value = <span class="ejemplo">parseInt(valor,16)</span>;
                                                   }else{
                                                     result.value = 'Debes insertar un número octal';
                                                   }    
@@ -1058,7 +1058,7 @@
                                                   result.value = '';
                                                 }else{
                                                   if(esHexadecimal(valor)){
-                                                    result.value = parseInt(valor,16).toString(8);
+                                                    result.value = <span class="ejemplo">parseInt(valor,16).toString(8)</span>;
                                                   }else{
                                                     result.value = 'Debes insertar un número octal';
                                                   }    
